@@ -1,0 +1,23 @@
+<div class="content">
+    <h4>Agregar archivo</h4>
+    <form [formGroup]="fileGroup" (submit)="addFile()">
+        <input type="text" matInput formControlName="type" placeholder="Tipo">
+        <input type="number" matInput formControlName="weight" placeholder="Peso">
+        <input type="number" matInput formControlName="quantity" placeholder="Cantidad">
+
+
+        <button mat-flat-button color="accent" type="submit">            
+            @if(this.isEdit){
+                Modificar
+                <mat-icon style="transform: scale(0.9);">edit</mat-icon>
+
+            }@else {
+                <mat-icon style="transform: scale(0.9);">add</mat-icon>
+                Agregar
+                
+            }
+        </button>
+        
+    </form>
+
+</div>
